@@ -8,3 +8,7 @@
 2. SQLite
 3. HTML & CSS
 4. Javascript
+
+> ***In Progresss...***
+
+page: [*Here*](https://nori.my.id)
