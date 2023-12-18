@@ -1,4 +1,4 @@
-# Manamegemt Perpustakaan Berbasis Web
+# Management Perpustakaan Berbasis Web
 ### Fitur
 1. Multi user (user, admin, root)
 2. Responsive
