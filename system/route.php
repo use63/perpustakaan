@@ -28,6 +28,7 @@ switch($pageActive) {
     break;
   case 'Auth':
     require_once "_auth.php";
+    break;
   default:
     require_once "view/404.php";
     break;
