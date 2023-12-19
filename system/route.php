@@ -4,8 +4,9 @@ $route = $_SERVER['REQUEST_URI'];
 $pages = [
   "/" => "Home",
   "/login" => "Login",
+  "/dashboard" => "Dashboard",
   "/auth" => "Auth",
-  "/dashboard" => "Dashboard"
+  "/api" => "Api"
   ];
   
 $pageActive = false;
@@ -28,6 +29,9 @@ switch($pageActive) {
     break;
   case 'Auth':
     require_once "_auth.php";
+    break;
+  case 'Api':
+    require_once "api.php";
     break;
   default:
     require_once "view/404.php";
