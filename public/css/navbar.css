@@ -6,10 +6,10 @@ a {
     padding: 1em;
     position: relative;
     display: flex;
-    justify-content: space-between;
     background-color: lightblue;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: sticky;
 }
 
 .navbar .nav-list .nav-item {
@@ -17,6 +17,14 @@ a {
 }
 
 @media (max-width: 785px) {
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        justify-content: space-between;
+    }
 
     .navbar .nav-button {
         padding: .3em;
@@ -79,6 +87,7 @@ a {
 @media (min-width:786px) {
     .navbar {
         padding: 0;
+        justify-content: space-evenly;
     }
 
     .navbar .brand {

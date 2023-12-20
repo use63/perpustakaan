@@ -6,7 +6,8 @@ $pages = [
   "/login" => "Login",
   "/dashboard" => "Dashboard",
   "/auth" => "Auth",
-  "/api" => "Api"
+  "/api" => "Api",
+  "/addbook" => "AddBook"
   ];
   
 $pageActive = false;
@@ -32,6 +33,9 @@ switch($pageActive) {
     break;
   case 'Api':
     require_once "api.php";
+    break;
+  case 'AddBook':
+    require_once "_addBook.php";
     break;
   default:
     require_once "view/404.php";

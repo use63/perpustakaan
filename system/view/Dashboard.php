@@ -1,9 +1,13 @@
 <?php
-
 session_start();
 
-?>
+function addBookTrue() {
+    if($_SESSION['addbook'] == true) {
+        echo "<script>let addBookTrue = true; </script>";
+    }
+}
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,11 +21,15 @@ session_start();
 </head>
 <body>
     
-<div class="container-fluid">
+<div class="container-fluid dash">
     <?php require_once "./system/components/navbar-admin.php"; ?>
     <?php require_once "./system/components/dash-main-admin.php"; ?>
 </div>
 
+<?php
+addBookTrue(); 
+unset($_SESSION['addbook']);
+?>
 <script src="/public/js/navbar.js"></script>
 <script src="/public/js/dash-main.js"></script>
 </body>

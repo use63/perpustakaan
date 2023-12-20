@@ -42,11 +42,5 @@ foreach ($userData as $data) {
             header('Location: /login');
             break;
         }
-    } else {
-        $_SESSION['error'] = true;
-        $_SESSION['error_message'] = "Email tidak terdaftar.";
-        header('Location: /login');
-        break;
     }
 }
-

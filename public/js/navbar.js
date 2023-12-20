@@ -15,3 +15,7 @@ let navAdmin = {
 	laporan: document.querySelectorAll(".nav-list ul li")[4],
 	keluar: document.querySelectorAll(".nav-list ul li")[5],
 };
+
+navAdmin["keluar"].addEventListener("click", () => {
+	window.location.replace("/login");
+});

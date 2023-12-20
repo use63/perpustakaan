@@ -1,5 +1,10 @@
 const dashMain = document.querySelector(".dash-main");
 const jumlahElemenAnak = dashMain.children.length;
+const navHeight = document.querySelector(".navbar").clientHeight;
+
+if (typeof addBookTrue === "undefined") {
+	addBookTrue = false;
+}
 
 for (let i = 1; i <= jumlahElemenAnak; i++) {
 	const variabelNama = "dashDiv" + i;
@@ -7,11 +12,20 @@ for (let i = 1; i <= jumlahElemenAnak; i++) {
 }
 
 window.addEventListener("load", () => {
-	dashDiv1.style.display = "block";
-	navAdmin["beranda"].classList.add("nav-active");
+	if (addBookTrue == true) {
+		dashDiv2.style.display = "block";
+		navAdmin["mbuku"].classList.add("nav-active");
+	} else {
+		dashDiv1.style.display = "block";
+		navAdmin["beranda"].classList.add("nav-active");
+	}
+
+	if (window.innerWidth <= 785) {
+		dashMain.style.marginTop = navHeight + "px";
+	}
 });
 
-navAdmin["beranda"].addEventListener("click", function (event) {
+navAdmin["beranda"].addEventListener("click", () => {
 	navAdmin["beranda"].classList.add("nav-active");
 	navAdmin["mbuku"].classList.remove("nav-active");
 	navAdmin["manggota"].classList.remove("nav-active");
@@ -25,7 +39,7 @@ navAdmin["beranda"].addEventListener("click", function (event) {
 	}
 });
 
-navAdmin["mbuku"].addEventListener("click", function (event) {
+navAdmin["mbuku"].addEventListener("click", () => {
 	navAdmin["beranda"].classList.remove("nav-active");
 	navAdmin["mbuku"].classList.add("nav-active");
 	navAdmin["manggota"].classList.remove("nav-active");
@@ -39,7 +53,7 @@ navAdmin["mbuku"].addEventListener("click", function (event) {
 	}
 });
 
-navAdmin["manggota"].addEventListener("click", function (event) {
+navAdmin["manggota"].addEventListener("click", () => {
 	navAdmin["beranda"].classList.remove("nav-active");
 	navAdmin["mbuku"].classList.remove("nav-active");
 	navAdmin["manggota"].classList.add("nav-active");
@@ -53,7 +67,7 @@ navAdmin["manggota"].addEventListener("click", function (event) {
 	}
 });
 
-navAdmin["laporan"].addEventListener("click", function (event) {
+navAdmin["laporan"].addEventListener("click", () => {
 	navAdmin["beranda"].classList.remove("nav-active");
 	navAdmin["mbuku"].classList.remove("nav-active");
 	navAdmin["manggota"].classList.remove("nav-active");

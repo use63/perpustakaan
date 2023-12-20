@@ -11,7 +11,7 @@ if (!$db) {
     die($db->lastErrorMsg());
 }
 
-// Query untuk membuat tabel "users"
+// Query untuk membuat tabel
 $query = <<<EOD
 CREATE TABLE IF NOT EXISTS users (
     id_user INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -19,9 +19,27 @@ CREATE TABLE IF NOT EXISTS users (
     alamat TEXT NOT NULL,
     nomor_telepon TEXT NOT NULL,
     email TEXT NOT NULL,
-    password TEXT NOT NULL,
+    password TEXT NOT NULL, 
     tanggal_pendaftaran TEXT NOT NULL,
     role TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS buku (
+    id_buku INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    judul TEXT NOT NULL,
+    kategori TEXT NOT NULL,
+    isbn TEXT NOT NULL,
+    tahun_terbit INTEGER NOT NULL,
+    penerbit TEXT NOT NULL,
+    penulis INTEGER NOT NULL,
+    jumlah_eksamplar INTEGER NOT NULL,
+    desktipsi TEXT NOT NULL,
+    total_stok INTEGER NOT NULL,
+    tanggal_masuk TEXT NOT NULL,
+    FOREIGN KEY (penulis) REFERENCES penulis(id_penulis)
+);
+CREATE TABLE IF NOT EXISTS penulis (
+    id_penulis INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    nama_penulis TEXT NOT NULL
 );
 EOD;
 
