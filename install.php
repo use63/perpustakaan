@@ -51,7 +51,7 @@ if (!$result) {
     die($db->lastErrorMsg());
 }
 
-echo "Database and Table created successfully\n";
+echo "Instalasi aplikasi perpustakaan berhasil, <a href='/'>klik di sini</a>";
 
 // Menutup koneksi
 $db->close();
