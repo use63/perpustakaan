@@ -1,5 +1,6 @@
 <div class="container-fluid">
     <div class="dma-tambah-buku">
+        <h1>Tambah Buku</h1>
         <div>
             <form action="/addbook" method="POST">
                 <div class="item-dmatb">
