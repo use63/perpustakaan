@@ -11,4 +11,4 @@
 
 > ***In Progresss...***
 
-page: [*Here*](https://nori.my.id)
+review: [*Here*](http://mylab.my.id)
