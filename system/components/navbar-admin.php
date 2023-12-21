@@ -1,6 +1,9 @@
 <div class="navbar">
-    <div class="brand">Perpustakaan</div>
-    <div class="nav-button">
+    <div class="brand">
+        <img src="./public/img/library.png" alt="">
+        Perpustakaan
+    </div>
+    <div class="nav-button"><hr>
         <span></span>
         <span></span>
         <span></span>

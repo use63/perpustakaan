@@ -1,12 +1,107 @@
-.dash-main > div {
-    display: none;
-    padding: 1em;
+.dash {
+    padding-bottom: 3em;
 }
 
+.dash-main > div {
+    display: none;
+}
+
+
 /* blok tambah buku */
+.dma-tambah-buku {}
+.dma-tambah-buku h1,
+.dma-tambah-penulis h1 {
+    margin: .5em 0;
+}
+.dma-tambah-penulis .item-dmatb,
+.dma-tambah-buku .item-dmatb {
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.dma-tambah-penulis .item-dmatb label,
+.dma-tambah-buku .item-dmatb label {
+    padding: 1em;
+    background-color: #eaeaea;
+}
+.dma-tambah-penulis .item-dmatb label,
+.dma-tambah-buku .item-dmatb label {
+    border-radius: 1em 0 0 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dma-tambah-penulis .item-dmatb button,
+.dma-tambah-buku .item-dmatb button {
+    padding: 1em;
+    grid-area: 1 / 2 / span 1 / span 1;
+    border-radius: 1em;
+    border: 2px solid navy;
+    background-color: whitesmoke;
+}
+.dma-tambah-penulis .item-dmatb button:hover,
+.dma-tambah-buku .item-dmatb button:hover {
+    background-color: navy;
+    color: white;
+}
+.dma-tambah-penulis .item-dmatb input,
+.dma-tambah-buku .item-dmatb input,
+.dma-tambah-buku .item-dmatb select,
+.dma-tambah-buku .item-dmatb textarea {
+    border-radius: 0 1em 1em 0;
+    border: 2px solid #eaeaea;
+    background-color: white;
+}
+.dma-tambah-penulis .item-dmatb input,
+.dma-tambah-buku .item-dmatb input {
+    padding-left: 1em;
+}
 
 
-@media (max-width: 785px) {}
+/* Blok Beranda */
+.dma-beranda .tabel-container {
+    overflow-x: auto;
+}
+
+.dma-beranda table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.dma-beranda table th, .dma-beranda table td {
+    padding: 1em;
+    border: 1px solid #ddd; /* Menggunakan warna abu-abu untuk batas */
+    background-color: #f2f2f2; /* Warna latar belakang abu-abu muda untuk baris header */
+    text-align: left;
+}
+
+.dma-beranda table th {
+    background-color: #ddd; /* Warna latar belakang abu-abu lebih gelap untuk header */
+}
+
+.dma-beranda table td button {
+    padding: .5em 1em;
+    background-color: #4CAF50; /* Warna hijau untuk tombol */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dma-beranda table td button:hover {
+    background-color: #45a049; /* Warna hijau yang lebih gelap saat tombol dihover */
+}
+
+
+@media (max-width: 785px) {
+    .dash-main > div {
+        padding: .3em;
+    }
+
+    .dma-tambah-penulis .item-dmatb button,
+    .dma-tambah-buku .item-dmatb button {
+        background-color: #eaeaea;
+    }
+}
 
 @media (min-width:786px) {
     .dash-main > div {
@@ -15,43 +110,8 @@
         border: 1px solid #aaa;
         border-radius: 1em;
         margin-top: 1em;
-    }
-    .dma-tambah-buku {}
-    .dma-tambah-buku h1 {
-        margin: .5em 0;
-    }
-    .dma-tambah-buku .item-dmatb {
-        margin-bottom: 1em;
-        display: grid;
-        grid-template-columns: 25% 75%;
-    }
-    .dma-tambah-buku .item-dmatb label {
         padding: 1em;
-        background-color: #eaeaea;
     }
-    .dma-tambah-buku .item-dmatb label {
-        border-radius: 1em 0 0 1em;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .dma-tambah-buku .item-dmatb button {
-        padding: 1em;
-        grid-area: 1 / 2 / span 1 / span 1;
-        border-radius: 1em;
-        border: 2px solid navy;
-        background-color: whitesmoke;
-    }
-    .dma-tambah-buku .item-dmatb button:hover {
-        background-color: navy;
-        color: white;
-    }
-    .dma-tambah-buku .item-dmatb input,
-    .dma-tambah-buku .item-dmatb select,
-    .dma-tambah-buku .item-dmatb textarea {
-        border-radius: 0 1em 1em 0;
-        border: 2px solid #eaeaea;
-        background-color: white;
-    }
-    .dma-tambah-buku .item-dmatb input {
-        padding-left: 1em;
-    }
+
+
 }

@@ -2,8 +2,8 @@ const dashMain = document.querySelector(".dash-main");
 const jumlahElemenAnak = dashMain.children.length;
 const navHeight = document.querySelector(".navbar").clientHeight;
 
-if (typeof addBookTrue === "undefined") {
-	addBookTrue = false;
+if (typeof addTrue === "undefined") {
+	addTrue = false;
 }
 
 for (let i = 1; i <= jumlahElemenAnak; i++) {
@@ -12,7 +12,7 @@ for (let i = 1; i <= jumlahElemenAnak; i++) {
 }
 
 window.addEventListener("load", () => {
-	if (addBookTrue == true) {
+	if (addTrue == true) {
 		dashDiv2.style.display = "block";
 		navAdmin["mbuku"].classList.add("nav-active");
 	} else {
@@ -20,8 +20,8 @@ window.addEventListener("load", () => {
 		navAdmin["beranda"].classList.add("nav-active");
 	}
 
-	if (window.innerWidth <= 785) {
-		dashMain.style.marginTop = navHeight + "px";
+	if (window.innerWidth) {
+		dashMain.style.marginTop = "calc(1em + " + navHeight + "px)";
 	}
 });
 

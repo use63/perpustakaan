@@ -19,6 +19,11 @@ html {
     max-width: 100%;
 }
 
+.container-fluid > hr{
+    margin: 1.5em 0;
+    width: 100%;
+}
+
 li {
     list-style: none;
 }

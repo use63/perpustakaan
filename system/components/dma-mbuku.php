@@ -23,6 +23,27 @@ $db->close();
 
 
 <div class="container-fluid">
+    <div class="dma-tambah-penulis">
+        <h1>Tambah Penulis</h1>
+        <div>
+            <form action="/addpenulis" method="POST">
+                    <div class="item-dmatb">
+                        <label for="addpenulis">Penulis</label>
+                        <input type="text" id="addpenulis" name="nama_penulis" required>
+                    </div>
+                    <div class="item-dmatb">
+                        <button type="submit" name="btnTambah" value="true">Tambah Penulis</button>
+                    </div>
+            </form>
+        </div>
+        <?php
+            // session_start();
+            if ($_SESSION['addpenulis'] == true) {
+                echo "<div style='padding: 1em; margin: 1em 0; background-color: yellowgreen; border-radius: 8px; color: white;'>Berhasil menambahakan penulis</div>";
+            }
+        ?>
+    </div>
+    <hr>
     <div class="dma-tambah-buku">
         <h1>Tambah Buku</h1>
         <div>
@@ -90,6 +111,6 @@ $db->close();
             if ($_SESSION['addbook'] == true) {
                 echo "<div style='padding: 1em; margin: 1em 0; background-color: yellowgreen; border-radius: 8px; color: white;'>Berhasil menambahakan buku</div>";
             }
-            ?>
+        ?>
     </div>
 </div>

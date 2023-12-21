@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-function addBookTrue() {
-    if($_SESSION['addbook'] == true) {
-        echo "<script>let addBookTrue = true; </script>";
+function addTrue() {
+    if($_SESSION['addbook'] == true || $_SESSION['addpenulis'] == true ) {
+        echo "<script>let addTrue = true; </script>";
     }
 }
 
@@ -28,8 +28,9 @@ function addBookTrue() {
 </div>
 
 <?php
-addBookTrue(); 
+addTrue(); 
 unset($_SESSION['addbook']);
+unset($_SESSION['addpenulis']);
 ?>
 <script src="/public/js/navbar.js"></script>
 <script src="/public/js/dash-main.js"></script>
