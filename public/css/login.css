@@ -16,10 +16,6 @@
     backdrop-filter: blur(5px);
 }
 
-.login .form-item {
-    /* background-color: lightcyan; */
-}
-
 .login .form-item label {
     color: white;
     background-color: cyan;
