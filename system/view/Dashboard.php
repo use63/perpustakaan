@@ -15,6 +15,7 @@ function addBookTrue() {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageActive; ?></title>
+    <link rel="icon" href="/public/img/library.png" type="image/x-icon">
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="/public/css/navbar.css">
     <link rel="stylesheet" href="/public/css/dashboard.css">

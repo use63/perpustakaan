@@ -1,60 +1,82 @@
+<?php
+$databaseFile = './system/perpustakaan.sqlite';
+$db = new SQLite3($databaseFile);
+
+// Mengeksekusi query untuk mengambil data dari tabel penulis
+$query = "SELECT id_penulis, nama_penulis FROM penulis";
+$result = $db->query($query);
+
+// Membuat opsi dropdown selama iterasi data
+$dmaOptionsPenulis = "";
+while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+    $idPenulis = $row['id_penulis'];
+    $namaPenulis = $row['nama_penulis'];
+
+    // Menambahkan opsi ke variabel $dmaOptionsPenulis
+    $dmaOptionsPenulis .= "<option value=\"$idPenulis\">$namaPenulis</option>";
+}
+
+// Tutup koneksi ke database
+$db->close();
+?>
+
+
+
 <div class="container-fluid">
     <div class="dma-tambah-buku">
         <h1>Tambah Buku</h1>
         <div>
             <form action="/addbook" method="POST">
                 <div class="item-dmatb">
-                    <label for="judul">Judul:</label>
+                    <label for="judul">Judul</label>
                     <input type="text" id="judul" name="judul" required>
                 </div>
 
                 <div class="item-dmatb">
-                    <label for="kategori">Kategori:</label>
+                    <label for="kategori">Kategori</label>
                     <input type="text" id="kategori" name="kategori" required>
                 </div>
 
                 <div class="item-dmatb">
-                    <label for="isbn">ISBN:</label>
+                    <label for="isbn">ISBN</label>
                     <input type="text" id="isbn" name="isbn" required>
                 </div>
 
                 <div class="item-dmatb">
-                    <label for="tahun_terbit">Tahun Terbit:</label>
+                    <label for="tahun_terbit">Tahun Terbit</label>
                     <input type="number" id="tahun_terbit" name="tahun_terbit" required>
                 </div>
 
                 <div class="item-dmatb">
-                    <label for="penerbit">Penerbit:</label>
+                    <label for="penerbit">Penerbit</label>
                     <input type="text" id="penerbit" name="penerbit" required>
                 </div>
 
                 <div class="item-dmatb">
-                    <label for="penulis">Penulis:</label>
+                    <label for="penulis">Penulis</label>
                     <select name="penulis" id="penulis">
                         <option value="#" disabled selected>PILIH PENULIS</option>
-                        <option value="1">penulis 1</option>
-                        <option value="#">penulis 2</option>
-                        <option value="#">penulis 3</option>
+                        <?= $dmaOptionsPenulis; ?>
                     </select>
                 </div>
 
                 <div class="item-dmatb">
-                    <label for="jumlah_eksamplar">Jumlah Eksamplar:</label>
+                    <label for="jumlah_eksamplar">Jumlah Eksamplar</label>
                     <input type="number" id="jumlah_eksamplar" name="jumlah_eksamplar" required>
                 </div>
 
                 <div class="item-dmatb">
-                    <label for="deskripsi">Deskripsi:</label>
+                    <label for="deskripsi">Deskripsi</label>
                     <textarea id="deskripsi" name="deskripsi" required></textarea>
                 </div>
 
                 <div class="item-dmatb">
-                    <label for="total_stok">Total Stok:</label>
+                    <label for="total_stok">Total Stok</label>
                     <input type="number" id="total_stok" name="total_stok" required>
                 </div>
 
                 <div class="item-dmatb">
-                    <label for="tanggal_masuk">Tanggal Masuk:</label>
+                    <label for="tanggal_masuk">Tanggal Masuk</label>
                     <input type="date" id="tanggal_masuk" name="tanggal_masuk" required>
                 </div>
 

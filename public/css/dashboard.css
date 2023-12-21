@@ -3,6 +3,8 @@
     padding: 1em;
 }
 
+/* blok tambah buku */
+
 
 @media (max-width: 785px) {}
 
@@ -13,5 +15,43 @@
         border: 1px solid #aaa;
         border-radius: 1em;
         margin-top: 1em;
+    }
+    .dma-tambah-buku {}
+    .dma-tambah-buku h1 {
+        margin: .5em 0;
+    }
+    .dma-tambah-buku .item-dmatb {
+        margin-bottom: 1em;
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+    .dma-tambah-buku .item-dmatb label {
+        padding: 1em;
+        background-color: #eaeaea;
+    }
+    .dma-tambah-buku .item-dmatb label {
+        border-radius: 1em 0 0 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .dma-tambah-buku .item-dmatb button {
+        padding: 1em;
+        grid-area: 1 / 2 / span 1 / span 1;
+        border-radius: 1em;
+        border: 2px solid navy;
+        background-color: whitesmoke;
+    }
+    .dma-tambah-buku .item-dmatb button:hover {
+        background-color: navy;
+        color: white;
+    }
+    .dma-tambah-buku .item-dmatb input,
+    .dma-tambah-buku .item-dmatb select,
+    .dma-tambah-buku .item-dmatb textarea {
+        border-radius: 0 1em 1em 0;
+        border: 2px solid #eaeaea;
+        background-color: white;
+    }
+    .dma-tambah-buku .item-dmatb input {
+        padding-left: 1em;
     }
 }
