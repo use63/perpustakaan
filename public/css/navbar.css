@@ -17,7 +17,8 @@ a {
     justify-content: space-between;
 }
 
-.navbar .brand {
+.navbar .brand > a {
+    color: black;
     padding: .2em;
     cursor: pointer;
     display: flex;

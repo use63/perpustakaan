@@ -1,7 +1,12 @@
+<?php
+session_start();
+?>
+
 <div class="navbar">
     <div class="brand">
-        <img src="./public/img/library.png" alt="">
-        Perpustakaan
+        <a href="/">
+            <img src="./public/img/library.png" alt="">Perpustakaan
+        </a>
     </div>
     <div class="nav-button"><hr>
         <span></span>
@@ -17,7 +22,7 @@
             <li class="nav-item">Manajemen Buku</li>
             <li class="nav-item">Manajemen Anggota</li>
             <li class="nav-item">Laporan</li>
-            <li class="nav-item">Keluar</li>
+            <li class="nav-item">Keluar (<?= $_SESSION['nama']; ?>)</li>
         </ul>
     </div>
 </div>

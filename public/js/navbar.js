@@ -17,5 +17,5 @@ let navAdmin = {
 };
 
 navAdmin["keluar"].addEventListener("click", () => {
-	window.location.replace("/login");
+	window.location.replace("/logout");
 });

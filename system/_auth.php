@@ -14,7 +14,7 @@ if (!$db) {
     die($db->lastErrorMsg());
 }
 // Query untuk mengambil email dan password dari tabel "users"
-$query = "SELECT email, password, role FROM users;";
+$query = "SELECT email, password, role, nama FROM users;";
 // Mengeksekusi query
 $result = $db->query($query);
 // Memeriksa hasil eksekusi query
@@ -30,17 +30,21 @@ while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 $db->close();
 
 
+$auth_error = true;
 foreach ($userData as $data) {
     if ($data['email'] == $email) {
         if ($data['password'] == $password) {
+            $auth_error = false;
             $_SESSION['role'] = $data['role'];
+            $_SESSION['nama'] = $data['nama'];
             header('Location: /dashboard');
-            break;
-        } else {
-            $_SESSION['error'] = true;
-            $_SESSION['error_message'] = "Autentikasi Gagal.";
-            header('Location: /login');
             break;
         }
     }
+}
+
+if ($auth_error) {
+    $_SESSION['error'] = true;
+    $_SESSION['error_message'] = "Autentikasi Gagal.";
+    header('Location: /login');
 }

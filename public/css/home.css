@@ -1,50 +1,243 @@
-.home {
-    background-image: url('/public/img/library-hero.jpg');
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --grey: #F3DFFF;
+    --blue: #9067EC;
+    --dark-grey: #aaaa;
+    --dark: #342e37;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
 }
 
-.home .home-items {
-    background-color: rgba(0, 155, 155, 0.2);
-    padding: 4em;
-    border-radius: 1em;
-    backdrop-filter: blur(5px);
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.home .home-items a {
-    display: block;
-    background-color: rgba(0, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
-    padding: 1em;
-    border-radius: .5em;
+*{
+    font-family: 'poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
     text-decoration: none;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+/* ------------Section---------- */
+section{
+    padding: 2rem 9%  ;
+}
+section:nth-child(even){
+    background: var(--grey);
+    margin: 4.7rem 7% 0 7%;
+    border-radius: 20px;
+}
+.btn{
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #fff;
+    background: var(--blue);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+}
+/* ---------------Header--------------- */
+header{
+    position:fixed;
+    top:0; left: 0; right:0;
+    background:#fff;
+    padding: 0.7rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    /* box-shadow: var(--box-shadow); */
+}
+header .logo{
+    color: var(--blue);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+header .navbar a{
+    font-size: 0.9rem;
+    border-radius: 20px;
+    padding: .5rem 1.5rem;
+    color: var(--dark);
+}
+header .navbar a.active,
+header .navbar a:hover{
+    color: #fff;
+    background: var(--blue);
+}
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--dark);
+    border-radius: 50%;
+    background: var(--grey);
+}
+header .icons i:hover,
+header .icons a:hover{
+    color: #fff;
+    background: var(--blue);
+    /* transform: 2rem; */
+}
+header .icons #menu-bars{
+    display: none;
 }
 
-.home .home-items a:hover {
-    background-color: navy;
-    color: white;
+/* ------------------Home----------- */
+.home .home-slider .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 3rem;
+}
+.home .home-slider .slide .content{
+    flex: 1 1 4rem;
+}
+.home .home-slider .slide .image{
+    flex: 1 1 4rem;
+} 
+.home .home-slider .slide .image img{
+    width: 80%;
+}
+.home .home-slider .slide .content span{
+    color: var(--blue);
+    font-size: 1.5rem;
+}
+.home .home-slider .slide .content h3{
+    color: var(--dark);
+    font-size: 3rem; 
+}
+.home .home-slider .slide .content p{
+    color: var(--light-color);
+    font-size: 1rem; 
+    padding: 1rem 0;
 }
 
-.home .footer {
-    position: fixed;
-    bottom: 1em;
-    color: white;
-    background-color: rgba(0, 255, 255, 0.3);
-    padding: .5em;
-    border-radius: 1em;
+/* -----------------Book List---------- */
+h1{
+    font-size: 1.2rem;
+    color: var(--dark);
+    margin-bottom: 2rem;
+}
+.book-list .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 0.5fr));
+    gap: 1.5rem;
+}
+.book-list .box-container .box{
+    padding: 1rem;
+    background: var(--grey);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.book-list .box-container .box img{
+    width: 7rem;
+    height: 10rem;
+}
+.book-list .box-container .box .bx.bxs-heart,
+.book-list .box-container .box .bx.bxs-bookmark{
+    position: absolute;
+    top: 1rem;
+    font-size: 1rem;
+    color: #fff;
+}
+.book-list .box-container .box .bx.bxs-heart:hover{
+    color: rgb(255, 0, 123);
+}
+.book-list .box-container .box .bx.bxs-bookmark:hover{
+    color: #ffd104;
+}
+.book-list .box-container .box .bx.bxs-heart{
+    right: 1rem;
+    display: none;
+}
+.book-list .box-container .box .bx.bxs-bookmark{
+    left: 1rem;
+    display: none;
+}
+.book-list .box-container .box:hover .bx.bxs-heart,
+.book-list .box-container .box:hover .bx.bxs-bookmark{
+    display: block;
+}
+.book-list .box-container .box h3{
+    color: var(--dark);
+    font-size: 1rem;
+}
+.book-list .box-container .box .stars{
+    padding: 0.5rem 0;
+}
+.book-list .box-container .box .stars{
+    font-size: 1rem;
+    color: #ffd104;
 }
 
-.home .footer:hover {
-    background-color: navy;
+/* ----------Footer----------- */
+.footer {
+    color: #fff;
+    background: var(--blue);
+    margin: 0;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* ---------Responsive-------- */
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+}
+/* ------------bagaian bars(kie) urung oke--------- */
+@media (max-width:768px){
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        border-top: 1.rem solid rgba(0,0,0,.2); 
+        border-bottom: 1.rem solid rgba(0,0,0,.2); 
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        display: block;
+        padding: 0.9rem;
+        margin: 1rem;
+        background: var(--grey);
+    }
+    /* ------------------------------------------ */
+
+    .book-list .box-container .box img{
+        height: auto;
+        width: 100%;
+    }
 }

@@ -1,5 +1,7 @@
 .login {
     background-image: url('/public/img/library-hero.jpg');
+    background-position: center;
+    background-size: cover;
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -16,19 +18,25 @@
     backdrop-filter: blur(5px);
 }
 
+.login .form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 .login .form-item label {
-    color: white;
+    color: black;
     background-color: cyan;
     display: block;
-    width: 100px;
+    /* width: 100px; */
     padding: .5em;
     border-radius: .5em .5em 0 0;
 }
 
 .login .form-item input {
-    padding: .5em;
+    padding: 1em;
     margin-bottom: .5em;
-    border-radius: 0 .5em .5em .5em;
+    border-radius: 0 0 .5em .5em;
     border: none;
 }
 
@@ -41,5 +49,12 @@
 }
 
 .login .form-item a {
-    color: white;
+    color: salmon;
+    text-decoration: none;
+}
+
+.login .form-item.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

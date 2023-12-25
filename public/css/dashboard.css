@@ -61,6 +61,10 @@
     overflow-x: auto;
 }
 
+.dma-beranda .tabel-container .cover {
+    max-width: 100px;
+}
+
 .dma-beranda table {
     border-collapse: collapse;
     width: 100%;

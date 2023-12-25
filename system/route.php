@@ -6,11 +6,12 @@ $pages = [
   "/login" => "Login",
   "/dashboard" => "Dashboard",
   "/auth" => "Auth",
+  "/logout" => "Logout",
   "/api" => "Api",
   "/addbook" => "AddBook",
   "/addpenulis" => "AddPenulis"
   ];
-  
+
 $pageActive = false;
 foreach ($pages as $key => $val) {
   if(strtolower($key) == strtolower($route)) {
@@ -41,6 +42,9 @@ switch($pageActive) {
   case 'AddPenulis':
     require_once "_addPenulis.php";
     break;
+  case 'Logout':
+      require_once "_logout.php";
+      break;
   default:
     require_once "view/404.php";
     break;

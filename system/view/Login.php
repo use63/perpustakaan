@@ -14,6 +14,12 @@
   <div class="form">
     <?php
     session_start();
+
+    if ($_SESSION['role']) {
+        header('Location: /Dashboard');
+        exit();
+    }
+
     if (isset($_SESSION['error_message'])) {
       echo "<div style='padding: 1em; margin: 1em 0; background-color: red; border-radius: 8px; color: white;'>" . $_SESSION['error_message'] . "</div>";
       unset($_SESSION['error_message']); // Hapus pesan kesalahan setelah ditampilkan
@@ -23,14 +29,15 @@
     <form action="auth" method="post">
       <div class="form-item">
         <label class="label" for="email">Email</label>
-        <input type="text" id="email" name="email">
+        <input type="text" id="email" name="email" required>
       </div>
       <div class="form-item">
         <label class="label" for="password">Password</label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password" name="password" required>
       </div>
-      <div class="form-item">
+      <div class="form-item button">
         <button>Login</button>
+        <a href="/register">Register</a>
         <a href="/">Home</a>
       </div>
     </form>
