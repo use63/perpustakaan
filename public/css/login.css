@@ -39,3 +39,7 @@
     background-color: navy;
     color: white;
 }
+
+.login .form-item a {
+    color: white;
+}

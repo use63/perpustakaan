@@ -17,7 +17,7 @@
   </div>
   <div class="footer">
     <p>
-      Copyright 2023 &copy; Powered by Kurnia Nur Hikmah | Nori Nofandi | Ulinuha Maulaya.
+      Copyright 2023 &copy;
     </p>
   </div>
 </div>
