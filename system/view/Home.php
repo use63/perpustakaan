@@ -393,9 +393,5 @@ if ($_SESSION['role']) {
     <p>&copy; 2023 LiteraHub_online library</p>
 </div>
 
-
-
-    <!-- link js -->
-    <script src="script.js"></script>
 </body>
 </html>
