@@ -2,6 +2,11 @@
     padding-bottom: 3em;
 }
 
+.show-element {
+    display: table-cell !important;
+}
+
+
 .dash-main > div {
     display: none;
 }
@@ -59,6 +64,20 @@
 /* Blok Beranda */
 .dma-beranda .tabel-container {
     overflow-x: auto;
+}
+
+.dma-beranda .tabel-container .dma-beranda-cover {
+    display: none;
+}
+
+.dma-beranda .toggle-cover {
+    display: inline-block;
+    padding: .5em;
+    margin: 1em 0;
+    background-color: #45a049;
+    color: #eaeaea;
+    border-radius: .5em;
+    cursor: pointer;
 }
 
 .dma-beranda .tabel-container .cover {

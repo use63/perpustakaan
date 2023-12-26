@@ -1,6 +1,8 @@
 const dashMain = document.querySelector(".dash-main");
 const jumlahElemenAnak = dashMain.children.length;
 const navHeight = document.querySelector(".navbar").clientHeight;
+const toggleCover = document.querySelector(".toggle-cover");
+const covers = document.querySelectorAll(".dma-beranda-cover");
 
 if (typeof addTrue === "undefined") {
 	addTrue = false;
@@ -79,4 +81,10 @@ navAdmin["laporan"].addEventListener("click", () => {
 	if (window.innerWidth < 786) {
 		navList.style.display = "none";
 	}
+});
+
+toggleCover.addEventListener("click", () => {
+	covers.forEach((cover) => {
+		cover.classList.toggle("show-element");
+	});
 });

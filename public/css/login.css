@@ -1,3 +1,7 @@
+body {
+    background-color: blueviolet;
+}
+
 .login {
     background-image: url('/public/img/library-hero.jpg');
     background-position: center;
@@ -25,8 +29,8 @@
 }
 
 .login .form-item label {
-    color: black;
-    background-color: cyan;
+    color: #eaeaea;
+    background-color: blueviolet;
     display: block;
     /* width: 100px; */
     padding: .5em;
@@ -44,13 +48,16 @@
     padding: 1em;
     border-radius: .5em;
     border: none;
-    background-color: navy;
+    background-color: blueviolet;
     color: white;
 }
 
 .login .form-item a {
-    color: salmon;
+    color: whitesmoke;
     text-decoration: none;
+    padding: .2em;
+    border-radius: .4em;
+    border: 1px groove white;
 }
 
 .login .form-item.button {

@@ -16,7 +16,7 @@ if ($result) {
     while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
         $tabelBuku .= "<tr>";
         $tabelBuku .= "<td>$noUrut</td>";
-        $tabelBuku .= "<td><img class='cover' src='/public/img/book1.jpg'></td>";
+        $tabelBuku .= "<td class='dma-beranda-cover'><img class='cover' src='/public/img/book1.jpg'></td>";
         $tabelBuku .= "<td>{$row['judul']}</td>";
         $tabelBuku .= "<td>{$row['kategori']}</td>";
         $tabelBuku .= "<td>{$row['isbn']}</td>";
@@ -40,11 +40,12 @@ $db->close();
 <div class="container-fluid">
     <div class="dma-beranda">
         <h1>Daftar Buku</h1>
+        <span class="toggle-cover">Show Cover</span>
         <div class="tabel-container">
             <table>
                 <tr>
                     <th>Nomor</th>
-                    <th>Cover</th>
+                    <th class='dma-beranda-cover'>Cover</th>
                     <th>Judul</th>
                     <th>Kategori</th>
                     <th>ISBN</th>

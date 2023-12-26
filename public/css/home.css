@@ -19,7 +19,8 @@
     transition: all 0.3s ease-in-out;
 }
 html{
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
+    font-size: 20px;
     overflow-x: hidden;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
