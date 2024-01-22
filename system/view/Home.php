@@ -23,7 +23,7 @@ if ($_SESSION['role']) {
 <body>
     <!----------- HEADER ------------>
    <header>
-    <a href="#" class="logo">LiteraHub</a>
+    <a href="#" class="logo">Library</a>
     <nav class="navbar">
         <a class="active" href="/" >home</a>
         <a href="#dishes">category</a>
@@ -78,13 +78,13 @@ if ($_SESSION['role']) {
                 </div>
             </div> -->
 
-        </div>
+        </div>Show
     </div>
 
 </section>
 
 <!----------Book List---------->
-<section class="book-list" id="book-list">
+<section class="book-list" id="book-list" style="display: none;">
     <h1>Recomendation</h1>
     <div class="box-container">
         <div class="box">
@@ -389,8 +389,8 @@ if ($_SESSION['role']) {
     </div>
 </section>
 <!-----------Footer----------->
-<div class="footer">
-    <p>&copy; 2023 LiteraHub_online library</p>
+<div class="footer" style="margin-top: 1em">
+    <p>2024 &copy; Rian Kurniawan | Nabil Rinda Al-Bara</p>
 </div>
 
 </body>

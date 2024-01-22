@@ -16,7 +16,7 @@ if ($result) {
     while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
         $tabelBuku .= "<tr>";
         $tabelBuku .= "<td>$noUrut</td>";
-        $tabelBuku .= "<td class='dma-beranda-cover'><img class='cover' src='/public/img/book1.jpg'></td>";
+        $tabelBuku .= "<td class='dma-beranda-cover'><img class='cover' src='/public/img/books/{$row['isbn']}.jpg'></td>";
         $tabelBuku .= "<td>{$row['judul']}</td>";
         $tabelBuku .= "<td>{$row['kategori']}</td>";
         $tabelBuku .= "<td>{$row['isbn']}</td>";
@@ -25,7 +25,7 @@ if ($result) {
         $tabelBuku .= "<td>{$row['nama_penulis']}</td>";
         $tabelBuku .= "<td>{$row['total_stok']}</td>";
         $tabelBuku .= "<td>{$row['tanggal_masuk']}</td>";
-        $tabelBuku .= "<td><button>EDIT</button></td>";
+        $tabelBuku .= "<td><button>Delete</button></td>";
         $tabelBuku .= "</tr>";
         $noUrut += 1;
     }

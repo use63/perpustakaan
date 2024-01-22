@@ -1,6 +1,20 @@
 <?php
 
-$route = $_SERVER['REQUEST_URI'];
+$basePATH = "/perpustakaan";
+
+$route = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+if (strpos($route, $basePATH) === 0) {
+  $route = substr($route, strlen($basePATH));
+}
+
+$route = "/" . trim($route, "/");
+
+if ($route === "/" || $route === "?i=1") {
+  $route = "/";
+}
+
+
 $pages = [
   "/" => "Home",
   "/login" => "Login",
@@ -49,3 +63,4 @@ switch($pageActive) {
     require_once "view/404.php";
     break;
 }
+

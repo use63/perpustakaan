@@ -47,7 +47,7 @@ $db->close();
     <div class="dma-tambah-buku">
         <h1>Tambah Buku</h1>
         <div>
-            <form action="/addbook" method="POST">
+            <form action="/addbook" method="POST" enctype="multipart/form-data">
                 <div class="item-dmatb">
                     <label for="judul">Judul</label>
                     <input type="text" id="judul" name="judul" required>
@@ -56,6 +56,15 @@ $db->close();
                 <div class="item-dmatb">
                     <label for="kategori">Kategori</label>
                     <input type="text" id="kategori" name="kategori" required>
+                </div>
+
+                <div class="item-dmatb">
+                    <label for="cover">Cover</label>
+                    <span>
+                        <label for="cover">Select Cover</label>
+                        <input type="file" id="cover" name="cover" required>
+                    </span>
+                    
                 </div>
 
                 <div class="item-dmatb">
